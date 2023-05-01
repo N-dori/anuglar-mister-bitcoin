@@ -1,0 +1,33 @@
+<ng-template #signup>
+  <signup  (close)="tuggleModal()"  ></signup>
+
+</ng-template>
+<section *ngIf="user; else signup" class='greating-container flex'>
+  <div class="btc-rate-container">
+
+    <div class="btc-symbol-container flex"> 
+      <span class="rate-btc">{{rate}}(USD) +</span>  
+      <img  class="btc-symbol" src="https://cryptologos.cc/logos/wrapped-bitcoin-wbtc-logo.png"/> 
+    </div>
+  </div>
+  <h1 class='greating'>Hello <span class='user-name'>{{user.name}}</span></h1>
+ <div class="slogen-wallet flex">
+   <div class="slogen-container flex">  
+   <div class='slogan'>
+   <h1 class='greating-title'>Be early to the future of finance</h1>
+    <h2 class='greating-sub-title'>Buy Bitcoin, Ethereum, and other leading cryptocurrencies on a platform trusted by millions.</h2>
+   </div>
+   </div>
+   <section class='digtal-wallet flex'>
+   <header class='digtal-wallet-img-container flex'>
+     <img src="https://freeiconshop.com/wp-content/uploads/edd/wallet-outline.png"/>
+   <span>BTC  {{user.coins}}</span>
+     <span>Digital Wallt</span>
+   </header>
+   <moves-list [tansactionsToContact]="tansactionsToContact "></moves-list>
+   
+   </section>
+
+  </div>
+  
+</section>

@@ -1,0 +1,38 @@
+.about{
+    grid-column: 1/-1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+background-image: url("https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?w=1060&t=st=1681861903~exp=1681862503~hmac=302a632224b66249f0bb8dee6615a9411ac90973a24b8cc035e23938e7941e65");
+background-size: cover;   
+
+.title-container>*{
+    font-family: Circular-Med;
+   color: #fff;
+
+}
+.title-container{
+
+    .title{
+    font-size: 2.9rem;
+    }
+    .sub-title{
+    
+    }
+}
+nav{
+    font-family: Circular-Light;
+        display: flex;
+        gap:15px;
+        a{
+            font-size: 1.2rem;
+            color: #dedede;
+
+        }
+    }
+}
+.about-img{
+    grid-column: 1/-1;
+    width: 100%;
+}

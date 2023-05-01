@@ -1,0 +1,11 @@
+
+<section class='my-chart'>
+    <button (click)="onCloseModal()" class="chart-colse-btn">X</button>
+<h2 class='confirmed-title'>Market Price (USD)</h2>
+<h4 class='confirmed-sub-title'>The average USD market price across major bitcoin exchanges.</h4>
+<div class="chart-container">
+
+    <canvas width="1000px" height="600px" id="MyChart" >{{ chart }}</canvas>
+</div>
+<p class='btc-desc-p'>The averge USD market price across major bitcoin exchanges</p>
+</section>

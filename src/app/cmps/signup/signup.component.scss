@@ -1,0 +1,69 @@
+:host{
+    grid-column: 1/-1;  
+}
+.signin-page-container{
+    // background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/872/293/small_2x/abstract-digital-background-with-technology-circuit-board-texture-electronic-motherboard-illustration-communication-and-engineering-concept-illustration-free-vector.jpg");
+    // background-repeat: no-repeat, repeat;
+grid-column: 1/-1;
+   img{
+    width: 100%;
+object-fit: cover;
+   }
+}
+.signin-modal-container {
+    position: absolute;
+    top:35%;
+    left: 50%;
+    translate: -50%;
+  
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.21) 0px 2px 8px 0px;
+    padding: 30px;
+    z-index: 5;
+    .sign-in-input {
+        display: block;
+        width: 100%;
+        height: 48px;
+        min-height: 48px;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(53, 63, 82);
+    }
+
+    .signin-title {
+        margin-top: 0;
+        text-align: center;
+        color: var(--clr3);
+        border-bottom: 1px solid var(--clr5);
+    }
+
+    .sign-in-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 140px;
+        height: 48px;
+        padding: 10px 15px;
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        transition: all 0.2s ease-in-out 0s;
+        white-space: nowrap;
+        line-height: 1;
+        background-color: var(--clr7);
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .sign-in-btn-link{
+        text-decoration: none;
+
+    }
+}

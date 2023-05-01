@@ -1,0 +1,128 @@
+.charts-container {
+    grid-column: 1/-1;
+    height: 15vh;
+    margin-block-start: 0px;
+
+    background-color: var(--clr6);
+    display: flex;
+    flex-direction: column;
+
+    .charts-header {
+        text-align: center;
+
+        .charts-header-title {
+            font-size: 2.4em;
+            color: var(--clr3);
+            font-family: Circular-Med;
+            margin-block: 25px;
+        }
+
+        .charts-header-sub-title {
+            font-family: Circular-Med;
+            ;
+            color: var(--clr3);
+            margin: 0;
+            font-size: 1.1rem;
+
+        }
+    }
+}
+
+.chart-links-title {
+    grid-column: 2;
+    color: var(--clr3);
+    font-family: Circular-Med;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.chart-links-container {
+    grid-column: 2;
+    padding-block: 30px;
+    background-color: var(--clr6);
+    min-height: 100vh;
+    .chart-link-inner-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+    .chart-link{
+        text-decoration: none;
+    }
+    .chart-link-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid rgb(238, 238, 238);
+        border-radius: 6px;
+        background-color: #fff;
+        padding: 10px;
+        cursor: pointer;
+    }
+ 
+
+    .chart-link-price-title {
+        font-size: 1.3rem;
+        color: var(--clr3);
+        text-align: center;
+    }
+
+    .btc-to-dollar {
+        text-align: center;
+        color:  var(--clr7);
+        font-weight: 600;
+        font-size: 1.875rem;
+    }
+
+    .btc-desc {
+        font-size: 0.875rem;
+        color: var(--clr7);
+        font-weight: 400;
+        margin: 4px 0px 0px;
+    }
+
+    .btc-desc-p {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        color: var(--clr8);
+        font-family: Circular-Light;
+    }
+}
+}
+
+.confirmed-chart-conatiner {
+    grid-column: 2;
+    height: 60vh;
+    margin-block: 30px;
+    .confirmed-title{
+        margin: 0px;
+font-size: 20px;
+font-weight: 600;
+display: flex;
+    }
+    .confirmed-sub-title{
+        color: var(--clr8);
+        font-family: Circular-Light;
+    }
+    
+}
+.confirmed-explanation-con{
+    grid-column: 2;
+    margin-block:50px;
+    .confirmed-explanation{
+        font-family: Circular-Med;
+        color: var(--clr3);
+    }
+    .confirmed-txt{
+        max-width: 80%;
+        color: var(--clr3);
+        font-size: 1rem;
+        font-family: Circular-Med;
+        text-align: start;
+    }
+
+}

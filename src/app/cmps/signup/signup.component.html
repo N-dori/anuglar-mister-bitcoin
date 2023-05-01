@@ -1,0 +1,12 @@
+    <section class="signin-modal-container">
+    <h2 class="signin-title">Sign-in</h2>
+
+      <label for="name"> Enter full name
+        <input [(ngModel)]="user.name"class="sign-in-input" required type="text" name="name" id="name" placeholder="name?"/>
+      </label>
+      
+      <button class="sign-in-btn" (click)="onSignup()">Sign In</button>
+      <p>Don't have a Blockchain Account? <span> Sign up Now !</span></p>
+     
+  </section>
+

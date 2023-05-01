@@ -1,0 +1,49 @@
+
+
+
+<section  *ngIf="isShown">
+  
+    <chart (close)="closeModal()" [type]="type"></chart>
+</section>
+
+<section class='charts-container' >
+    <header class='charts-header'>
+      <h1 class='charts-header-title'>Blockchain Charts</h1>
+      <p class='charts-header-sub-title'>The most trusted source for data on the bitcoin blockchain</p>
+    </header>
+
+ <section  class='chart-links-container'>
+
+  <section class='chart-links-title'>
+    <p class='chart-links-title'>Popular Stats</p>
+    </section>
+    <section class='chart-link-inner-container'>
+    
+       <article class='chart-link-container'(click)="switchChart('market-price')">
+    <h2  class='chart-link-price-title'>Market Price (USD)</h2>
+    <span class='btc-to-dollar'>$29,464</span>
+    <span class='btc-desc'>(USD)</span>
+    <p class='btc-desc-p'>The averge USD market price across major bitcoin exchanges</p>
+  </article>
+
+
+   
+  <article class='chart-link-container' (click)="switchChart('n-transactions')">
+    <h2 class='chart-link-price-title' >Confirmed Transactions Per Day</h2>
+    <span class='btc-to-dollar'>291,659</span>
+    <span class='btc-desc'>Transactions</span>
+    <p class='btc-desc-p'>The total number of confirmed transactions per day.</p>
+  </article>
+
+
+  <article class='chart-link-container' (click)="switchChart('avg-block-size')">
+    <h2 class='chart-link-price-title' >Average Block Size (MB)</h2>
+    <span class='btc-to-dollar'>1.78</span>
+    <span class='btc-desc'>MB</span>
+    <p class='btc-desc-p'>The average block size over the past 24 hours in megabytes.</p>
+  </article>
+
+    </section>
+ </section>
+</section>
+

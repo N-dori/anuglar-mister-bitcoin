@@ -1,0 +1,15 @@
+:host{
+    grid-column: 1/-1;
+
+}
+.app-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
+    background-color: #efefef;
+    small{
+        font-family: Cirular-Light;
+        margin-inline-start: 30px;
+    }
+}

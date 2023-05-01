@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5b3a9751-0fb3-4a3c-8969-8da7243325e2"
   }
 }

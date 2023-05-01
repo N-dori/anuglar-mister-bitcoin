@@ -1,0 +1,19 @@
+<article class='contact-card' >
+
+    <h2 class='contact-card-user-name flex'>{{contact.name}}</h2>
+    <div class='contact-card-user-img'>
+    <img src={{url+contact.name}} />
+    </div>
+    <span class='contact-card-user-email flex' >{{contact.email}}</span>
+    <span class='contact-card-user-phone flex' >{{contact.phone}}</span>
+  <div class='actions flex'>
+    <a class="details-Edit-link" title="edit" [routerLink]="['/edit',  contact._id]"><img src={{svg.edit}}/></a>
+    <a class="details-Edit-link" title="details" routerLink="/details/{{contact._id}}"><img src={{svg.details}}/></a>
+
+  <button class="details-Edit-remove" title="remove" (click)="onRemoveContact(contact._id)" ><img src={{svg.remove}} /></button>
+  <div class="details-link-transfer">
+    <a title="transfer-funds" [routerLink]="['/transfer-funds',contact._id]"><img src={{svg.payments}}/></a>
+  </div>
+
+  </div>
+</article>

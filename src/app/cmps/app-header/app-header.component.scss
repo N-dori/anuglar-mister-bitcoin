@@ -1,0 +1,92 @@
+.app-header {
+    grid-column: 1/-1;
+
+    background-color: var(--clr2);
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(auto, 1330px) minmax(140px, 1fr);
+
+    padding: 18px;
+    border-bottom: 1px solid #efe;
+
+    .logo-container {
+        grid-column: 2;
+        grid-row: 1;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 8px;
+        .logo {
+            width: 64px;
+            margin-inline-start: 14px;
+        }
+
+        span {
+            color: #fff;
+            font-weight: 600;
+        }
+
+    }
+
+
+    .main-menu {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 66px;
+
+        // margin-inline-end: 14px;
+        a {
+            font-family: Ciruclar Med;
+            color: #ededed;
+            font-size: 1.2rem
+        }
+
+        .active {
+            font-size: 1.3rem;
+            color: #fff;
+
+        }
+    }
+
+    .btn-signin-container {
+        grid-column: 3;
+        align-items: center;
+        justify-content: center;
+        margin-inline-start: 30px;
+        .signup-btn {
+            text-decoration: none;
+            font-family: Circular-Med;
+            display: flex;
+            cursor: pointer;
+            flex-direction: row;
+
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            opacity: 1;
+            border: medium none;
+            padding: 10px 13px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 12px;
+
+            height: 34px;
+            max-width: 110px;
+
+            .sign-in-img {
+                width: 16.67px;
+                height: 16.67px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 30px;
+                display: inline-flex;
+                margin: 0px 7px 0px 0px;
+            }
+
+        }
+    }
+
+}
+

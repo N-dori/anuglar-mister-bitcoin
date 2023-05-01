@@ -1,0 +1,20 @@
+<header class="app-header ">
+    <section class="btn-signin-container flex">
+
+    <button (click)="tuggleModal()" class="signup-btn">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBOiD85vBVv50sGbhWjBtJbUqZE2DMalycOk1TDSB2DICsj7En5X8BfKqHrK7nfJwfo98&usqp=CAU" class="sign-in-img"/>
+      Sign In</button>
+
+    </section>
+      <div class="logo-container flex" >
+     <img (click)="redirect()" class='logo'src='https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=025'/>
+      <span>Mister Bit Coin</span>
+      </div>
+      <nav  class="main-menu" routerLinkActive="active">
+      <a routerLink="/"  routerLinkActive="active"> Home</a>
+      <a  routerLink="/contacts" routerLinkActive="active"> Contacts</a>
+      <a routerLink="/charts" routerLinkActive="active" > Charts</a>
+      <a routerLink="/about"  routerLinkActive="active"> About</a>
+      </nav>
+      <signup (close)="tuggleModal()" *ngIf="isShown"></signup>
+  </header>

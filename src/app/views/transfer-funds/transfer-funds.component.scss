@@ -1,0 +1,142 @@
+:host{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+}
+.transfer-page-contianer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/003/497/128/non_2x/currency-money-transfer-network-and-global-business-symbol-background-illustration-vector.jpg");
+    background-size: cover;
+     width:100%;
+  .transfer-contact-contianer{
+    display: flex;
+    align-items: center;
+    gap:80px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 650px;
+    margin-block-end: 15px;
+    background-color: #1b2028;
+    border-radius: 16px;
+    position: relative;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    text-align: center;
+    color: #f1f3f3;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-image: linear-gradient(
+        135deg,
+        rgba(#752e7c, 0.35),
+        rgba(#734a58, 0.1) 15%,
+        #1b2028 20%,
+        #1b2028 100%
+    );
+    &:after {
+        content: "";
+        display: block;
+        top: -3px;
+        left: -3px;
+        bottom: -3px;
+        right: -3px;
+        z-index: -1;
+        position: absolute;
+        border-radius: 16px;
+        background-image: linear-gradient(
+            135deg,
+            #752e7c,
+            #734a58 20%,
+            #1b2028 30%,
+            #2c333e 100%
+        );
+    }
+}
+
+  
+ .transfer-form{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    input{
+        width: 100%;
+  
+        min-height: 35px;
+        border: 2px solid lightblue;
+        border-radius: 7px;
+        text-indent: 20px;
+        font-size: large;
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.168627451);
+        border: none;
+
+        // margin-bottom: 3rem;
+    }
+    .transfer-contact-name{
+        color: var(--clr6);
+    }
+    h2{
+        color: var(--clr6);
+        font-family: Circular-Light;
+        margin-bottom: 3rem;
+    }
+    .transfer-btn{
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        height: 35px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        line-height: 1;
+        transition: 0.15s ease;
+        margin-block-start: 3em;
+        &--primary {
+            border-radius: 99em;
+            background-color: #3772ff;
+            background-image: linear-gradient(135deg, #5587ff, #3772ff);
+            color: #fff;
+            padding: 0 1.375em;
+            margin-block: 2em;
+            font-family: Circular-Med;
+            font-size: 1rem;
+            &:hover,
+            &:focus {
+                background-size: 150%;
+            }}
+    }
+ }
+
+ .transfer-contact-info{
+    flex-direction: column;
+    margin-block-end: 36px;
+    .transfer-contact-img-container{
+        justify-content: center;
+        align-items: center;
+        .transfer-contact-img{
+           border-radius: 999px;
+           max-width: 220px;
+        }
+    }
+     .transfer-contact-details{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        p{
+            font-family: Circular-Light;
+            font-size:14px;
+            color: var(--clr6);
+            margin: 0;
+        }
+     }
+ }
+}
+
+   
+
+  

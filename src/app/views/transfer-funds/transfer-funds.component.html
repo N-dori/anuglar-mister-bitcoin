@@ -1,0 +1,27 @@
+<section *ngIf="contact" class='transfer-page-contianer'>
+
+    <div class='transfer-contact-contianer '>
+
+      <div class='transfer-contact-info flex'>
+        <div class='transfer-contact-img-container flex'>
+          <img class='transfer-contact-img' src={{url+contact.name}} />
+
+        </div>
+        <div class='transfer-contact-details flex'>
+          <p>Email <span class='details-info-email'>{{contact.email}}</span></p>
+
+        </div>
+      </div>
+
+      <form (submit)="onSaveContact()" class='transfer-form flex'>
+        <h2>Transfer Coins to <span class='transfer-contact-name'>{{contact.name}}</span></h2>
+        <label for='coins'>Amount to transfer
+          <input [(ngModel)]="move.coins" type='number' name="coins" id='coins' />
+        </label>
+        <button class="transfer-btn --primary transfer-btn--primary">Transfer</button>
+      </form>
+    </div>
+<moves-list [contact]="contact" [tansactionsToContact]="tansactionsToContact"></moves-list>
+  </section>
+
+

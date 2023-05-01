@@ -1,0 +1,17 @@
+<section class='moves-to-curr-contact'>
+    <h2 *ngIf="contact?.name; else home" class='edit-page-img'>All transactions from you to {{contact.name }}</h2>
+    <ng-template #home>
+        <h2>{{tansactionsToContact?.length!==0?'Last transactions':'No Transactions made yet...'}}</h2>
+    </ng-template>
+    <ul class="flex" *ngFor="let transaction of tansactionsToContact">
+
+        <li class="moves-transaction flex">
+            <span>To {{transaction.to}}</span>
+            &nbsp;
+            <span>at {{transaction.at}} </span>
+            &nbsp;
+            <span>amount {{transaction.coins}}</span>
+        </li>
+
+    </ul>
+</section>

@@ -1,0 +1,41 @@
+.form-container {
+    grid-column: 2;
+    padding: 16px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    .filter-form {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        width: 100%;
+
+    }
+
+    input {
+        width: 100%;
+     
+        border: none;
+        border-radius: 7px;
+        text-indent: 20px;
+        font-size: 0.5em;
+        // box-shadow: 0 0 11px rgba(0, 0, 0, 0.168627451);
+        text-indent: 30px;
+        background-repeat: no-repeat;
+        font-size: 1.15em;
+        color:rgb(129, 127, 127);
+        min-height: 26px;
+    }
+    .filter-name-input{
+        background-image: url('https://res.cloudinary.com/dii16awkb/image/upload/v1682949339/search_FILL0_wght400_GRAD0_opsz24_g0eyvt.svg');
+    }
+    .filter-email-input{
+        background-image: url('https://res.cloudinary.com/dii16awkb/image/upload/v1682949567/mail_FILL0_wght400_GRAD0_opsz24_wyxhob.svg');
+        
+    }
+    .filter-phone-input{
+        background-image: url('https://res.cloudinary.com/dii16awkb/image/upload/v1682949507/call_FILL0_wght400_GRAD0_opsz24_ljsqwt.svg');
+
+    }
+}

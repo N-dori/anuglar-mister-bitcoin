@@ -1,0 +1,35 @@
+<section class='details-container flex'>
+
+<article *ngIf="(contact$|async)as contact"  class="profile">
+  <a class="close" routerLink="/contacts/" >
+    <span  >X</span>
+  </a>
+  <div class="profile-image">
+    <img src={{url+contact?.name}} />
+	</div>
+  <h1> Hello! my name is {{contact?.name}} </h1>
+	<h2 class="profile-username">{{contact?.name}}</h2>
+	<small class="profile-user-handle">{{contact?.email}}</small>
+	<small class="profile-user-handle">{{contact?.phone}}</small>
+	<div class="profile-actions flex">
+		
+		<a routerLink="/details/{{contact?.nextContactId}}" class="btn btn--icon">
+			<i class="ph-export flex"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="20" viewBox="0 96 960 960" width="20"><path d="M400 976 0 576l400-400 71 71-329 329 329 329-71 71Z"/></svg></i>
+		</a>
+		<a routerLink="/details/{{contact?.prevContactId}}" class="btn btn--icon">
+			<i class="ph-dots-three-outline-fill flex"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="20" viewBox="0 96 960 960" width="20"><path d="m321 976-71-71 329-329-329-329 71-71 400 400-400 400Z"/></svg></i>
+		</a>
+	</div>
+	<div class="profile-links">
+		<a href="#" class="link link--icon">
+			<i class="ph-twitter-logo"></i>
+		</a>
+		<a href="#" class="link link--icon">
+			<i class="ph-facebook-logo"></i>
+		</a>
+		<a href="#" class="link link--icon">
+			<i class="ph-instagram-logo"></i>
+		</a>
+	</div>
+</article>
+</section>

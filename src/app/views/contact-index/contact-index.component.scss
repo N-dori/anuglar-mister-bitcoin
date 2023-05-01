@@ -1,0 +1,50 @@
+.contact-title {
+  // text-align: center;
+  margin-bottom: 30px;
+  font-family: Circular-Med;
+  font-size: 2em;
+  align-self: flex-start;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 54px;
+  right: 90px;
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 14px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+
+}
+.contact-list-wraper{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 15px;
+  padding: 35px;
+  max-width: 850px;
+  min-height: 100vh;
+  min-width: 850px;
+  h2{
+    border-bottom:1px solid  #dedede ;
+  }
+}
+:host{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

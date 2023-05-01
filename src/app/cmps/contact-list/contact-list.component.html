@@ -1,0 +1,9 @@
+<section class="contacats-list-container">
+    <contact-preview *ngFor="let contact of contacts"
+     [contact]="contact" 
+     (remove)="remove.emit($event)"
+     (tranferFunds)="tranferFunds.emit($event)"
+     >
+    </contact-preview>
+
+</section>

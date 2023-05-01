@@ -1,0 +1,25 @@
+       <section class='edit-page-container flex'>
+        <section class="profile">
+
+            <h1>{{ contact._id? 'Edit ' : 'Add ' }} Contact</h1>
+            <div class="profile-image">
+                <img *ngIf="contact._id; else withoutId" class='edit-page-img' src={{url+contact.name}}/>
+                <ng-template #withoutId>
+                    <img class='edit-page-img' src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png"/>
+                </ng-template> 
+            </div>
+        <form class='edit-form flex' (ngSubmit)="onSave()">
+            
+            <label for="name"></label>
+            <input  [(ngModel)]="contact.name" placeholder="name" type="text" name="name" id="name" />
+            <label for="email"></label>
+            <input [(ngModel)]="contact.email" placeholder="email" type="email" name="email" id="email" />
+            <label for="phone"></label>
+            <input  [(ngModel)]="contact.phone" placeholder="phone" type="text" name="phone" id="phone" />
+            <button class="btn btn--primary">{{contact._id? 'Edit' : 'Add' }}</button>
+           
+        </form>
+    </section>
+    
+
+</section>

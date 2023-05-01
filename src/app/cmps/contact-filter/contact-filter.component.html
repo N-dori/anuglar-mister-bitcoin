@@ -1,0 +1,14 @@
+<section class='form-container'>
+
+    <form class='filter-form'>
+        <label  For='name'>
+        <input class="filter-name-input"  [(ngModel)]="contactFilter.name" (ngModelChange)="onSetFilter($event)" type='text' name='name' id='name' placeholder='search for contact...' />
+        </label>
+        <label For='email'>
+        <input class="filter-email-input" [(ngModel)]="contactFilter.email" (ngModelChange)="onSetFilter($event)" type='text' name='email' id='email' placeholder='email address'/>
+</label>
+        <label For='phone'>
+        <input class="filter-phone-input" [(ngModel)]="contactFilter.phone" (ngModelChange)="onSetFilter($event)" type='text' name='phone' id='phone' placeholder='phone number' />
+        </label>
+    </form>
+    </section>

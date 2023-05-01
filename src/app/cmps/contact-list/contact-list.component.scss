@@ -1,0 +1,11 @@
+.contacats-list-container {
+
+    .contacts-header {
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}

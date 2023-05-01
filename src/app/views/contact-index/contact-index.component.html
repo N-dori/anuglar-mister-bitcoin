@@ -1,0 +1,10 @@
+<section class="contact-list-wraper">
+    <contact-filter></contact-filter>
+    <h2 class="contact-title">Contact List</h2>
+    <contact-list  [contacts]="contacts$ | async"
+    (remove)="removeContact($event)"
+    (tranferFunds)="tranferFunds.emit($event)"
+    ></contact-list>
+    <button title='Add contact' class='add-button' (click)="addContact()">+</button>
+
+</section>

@@ -1,0 +1,38 @@
+<section class='my-chart' [ngSwitch]="type">
+
+    <section *ngSwitchCase="'market-price'"  class="chart-containerr">
+
+        <button (click)="onCloseModal()" class="chart-colse-btn">X</button>
+        <h2 class='confirmed-title'>Market Price (USD)</h2>
+        <h4 class='confirmed-sub-title'>The average USD market price across major bitcoin exchanges.</h4>
+        <div class="chart-container">
+            
+            <canvas width="1000px" height="600px" id="MyChart" >{{ chart }}</canvas>
+        </div>
+        <p class='btc-desc-p'>The averge USD market price across major bitcoin exchanges</p>
+    </section>
+    <section *ngSwitchCase="'n-transactions'"  class="chart-containerr">
+
+        <button (click)="onCloseModal()" class="chart-colse-btn">X</button>
+        <h2 class='confirmed-title'>Confirmed Transactions Per Day</h2>
+        <h4 class='confirmed-sub-title'>The total number of confirmed transactions per day.</h4>
+        <div class="chart-container">
+            
+            <canvas width="1000px" height="600px" id="MyChart" >{{ chart }}</canvas>
+        </div>
+        <p class='btc-desc-p'>The total number of confirmed transactions per da of bitcoin exchanges</p>
+    </section>
+    <section *ngSwitchCase="'avg-block-size'"  class="chart-containerr">
+
+        <button (click)="onCloseModal()" class="chart-colse-btn">X</button>
+        <h2 class='confirmed-title'>Average Block Size (MB)</h2>
+        <h4 class='confirmed-sub-title'>The average USD market price across major bitcoin exchanges.</h4>
+        <div class="chart-container">
+            
+            <canvas width="1000px" height="600px" id="MyChart" >{{ chart }}</canvas>
+        </div>
+        <p class='btc-desc-p'>The average block size over the past 24 hours in megabytes.</p>
+    </section>
+
+</section>
+
