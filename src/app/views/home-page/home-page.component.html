@@ -1,5 +1,9 @@
 <ng-template #signup>
-  <signup  (close)="tuggleModal()"  ></signup>
+  <section class=" modal-signup-continer">
+    <img class="signin-btc-img" src="https://res.cloudinary.com/dii16awkb/image/upload/v1683032601/SL-0212121-40670-60_ppqdto.jpg"/>
+    <signup  (close)="tuggleModal()"  ></signup>
+
+  </section>
 
 </ng-template>
 <section *ngIf="user; else signup" class='greating-container flex'>
