@@ -41,8 +41,9 @@ this.subscription = this.route.params
       next: () => this.router.navigateByUrl('/contacts'),
       error: err => console.log('err:', err)
     })
-    console.log('this.Contact');
+   
   }
+ 
   ngOnDestroy():void{
     this.subscription.unsubscribe()
 
