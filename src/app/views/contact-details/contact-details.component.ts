@@ -22,12 +22,22 @@ export class ContactDetailsComponent {
   ngOnInit(){
     this.contact$ = this.route.params.pipe(
       switchMap(params => {
-        const contact= this.ContactService.getContactById(params['id'])        
+        const contact= this.ContactService.getContactById(params['id'])   
+        console.log('details contact',contact);
+             
         return contact }),
         
         )
    
     // this.loadContact(this.currContactId)
+  }
+  getNextPrevId(contact:Contact,diff:number){
+    console.log('hiiiiiiiiiiiiiiiiiiiiiii');
+    
+  const nextPrevId = this.ContactService.getNexPrevId(contact,diff)
+  console.log('nextPrevId',nextPrevId);
+  
+  return nextPrevId
   }
   // loadContact(currContactId:string|undefined){
   //   this.contact$= this.ContactService.getContactById(currContactId)

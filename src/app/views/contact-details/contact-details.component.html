@@ -13,10 +13,10 @@
 	<small class="profile-user-handle">{{contact?.phone}}</small>
 	<div class="profile-actions flex">
 		
-		<a routerLink="/details/{{contact?.nextContactId}}" class="btn btn--icon">
+		<a routerLink="/details/{{getNextPrevId(contact,1)}}" class="btn btn--icon">
 			<i class="ph-export flex"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="20" viewBox="0 96 960 960" width="20"><path d="M400 976 0 576l400-400 71 71-329 329 329 329-71 71Z"/></svg></i>
 		</a>
-		<a routerLink="/details/{{contact?.prevContactId}}" class="btn btn--icon">
+		<a routerLink="/details/{{getNextPrevId(contact,-1)}}" class="btn btn--icon">
 			<i class="ph-dots-three-outline-fill flex"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="20" viewBox="0 96 960 960" width="20"><path d="m321 976-71-71 329-329-329-329 71-71 400 400-400 400Z"/></svg></i>
 		</a>
 	</div>

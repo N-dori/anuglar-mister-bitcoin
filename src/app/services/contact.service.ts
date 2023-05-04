@@ -19,6 +19,7 @@ export class ContactService {
     private _contactsFilter$ = new BehaviorSubject<ContactFilter>({name:'',email:'',phone:''})
     public contactsFilter$ = this._contactsFilter$.asObservable()
 
+
     constructor() {
         // Handling Demo Data, fetching from storage || saving to storage 
         const contacts = JSON.parse(localStorage.getItem(ENTITY) || 'null')
@@ -35,7 +36,7 @@ export class ContactService {
             .pipe(
                 tap(contacts => {
                     const filterBy = this._contactsFilter$.value
-                    console.log('filterBy',filterBy);
+                    console.log('filterBy',filterBy.name);
                     
                     if (filterBy ) {
                         contacts = this._filter(contacts, filterBy)
@@ -47,6 +48,18 @@ export class ContactService {
                 retry(1),
                 catchError(this._handleError)
             )
+    }
+    public getNexPrevId(contact:Contact,diff:number) {
+        const contacts = this._contacts$.value
+        console.log('servicreeeeeeeeeeeee');
+        const contactIdx = contacts.findIndex((currContact) => currContact._id === contact._id)
+        if(diff>0){
+            return contacts[contactIdx + 1] ? contacts[contactIdx + 1]._id : contacts[0]._id
+        }
+        else{
+            return contacts[contactIdx - 1]? contacts[contactIdx - 1]._id: contacts[contacts.length - 1]._id
+        }
+     
     }
 
     public getContactById(id: any): Observable<Contact> {
@@ -98,22 +111,17 @@ export class ContactService {
     }
 
     private _addContact(contact: Contact) {
-        const newContact = new Contact(contact.name, contact.email, contact.phone);
+        
+        
+        const newContact = new Contact(contact.name, contact.email, contact.phone, contact.nextContactId,contact.prevContactId);
         
         if (typeof newContact.setId === 'function') newContact.setId(this._getRandomId());
         return from(storageService.post(ENTITY, contact))
         .pipe(
-            tap(newContact => {
-                    const contacts = this._contacts$.value
-                    this._contacts$.next([...contacts, newContact])
+            tap(newContact => {    
+                const contacts = this._contacts$.value
+                this._contacts$.next([...contacts, newContact])
                     this._sort(this._contacts$.value)
-                    const contactIdx = contacts.findIndex((currContact) => currContact._id === newContact._id)
-                    newContact.nextContactId=contacts[contactIdx + 1] ? contacts[contactIdx + 1]._id : contacts[0]._id
-                 
-                    newContact.prevContactId = contacts[contactIdx - 1]
-                    
-                    ? contacts[contactIdx - 1]._id
-                    : contacts[contacts.length - 1]._id
                 }),
                 retry(1),
                 catchError(this._handleError)
